@@ -31,7 +31,7 @@ section{
 	margin-top: 55px;
 }
 
-h1, h2, h3, .moreButton, figcaption{
+h1, h2, h3, .boxButton, .borderButton, figcaption{
 	font-family: Teko, san-serif;
 	font-weight: 400;
 	text-transform: uppercase;
@@ -74,15 +74,36 @@ a {
 	clear: both;
 }
 
-.moreButton{
+.boxButton, .borderButton{
 	display: inline-block;
+	font-size: 1.25rem; /* 20 px */
+	background-color: white;
+	text-decoration: none;
+}
+
+.boxButton{
 	width: 25%;
 	max-width: 240px;
 	padding: 15px 0;
-	font-size: 1.25rem; /* 20 px */
-	background-color: white;
 	color: black;
-	text-decoration: none;
+}
+
+.boxButton:hover{
+	background-color: black;
+	color: white;
+}
+
+.borderButton{
+	padding: 15px 0;
+	width: auto;
+	padding: 5px 0;
+	color: #f63c3c;
+	border-bottom: 5px solid #f63c3c;
+}
+
+.borderButton:hover{
+	color: black;
+	border-bottom: 5px solid black;
 }
 
 .bgRed {
@@ -138,22 +159,19 @@ header li{
 	margin-right: 35px;
 	height: 70px;
 	letter-spacing: .1em;
+	color: #929292;
+}
+
+.mainNav li.active{
+	color: red;
+	border-bottom: 5px solid red;
 }
 
 .mainNav li:last-child{	
 	margin-right: 0;
 }
 
-.mainNav li a{
-	text-decoration: none;
-	color: #929292;
-}
-
-.mainNav li.active{
-	border-bottom: solid 5px red;
-}
-
-.mainNav li.active a {
+.mainNav li:hover{
 	color: red;
 }
 
@@ -235,14 +253,6 @@ header li{
 .projects p{
 	max-width: 75%;
 	margin: 0 auto;
-}
-
-.projects a.moreButton{
-	display: inline-block;
-	width: auto;
-	padding: 3px 0;
-	color: #f63c3c;
-	border-bottom: 5px solid #f63c3c;
 }
 
 /* Hover Effects Style --------------------- */
